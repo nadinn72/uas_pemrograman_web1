@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $title ?? 'UAS Web 1'; ?></title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/uas_web1/assets/css/style.css">
+    <link rel="stylesheet" href="/uas_web1/assets/css/films.css">
+    <!-- INLINE CSS untuk film grid (tambahkan di sini) -->
+    <style>
+    /* Film Grid Styles */
+    .film-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        margin: 30px 0;
+    }
+
+    .film-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .film-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .film-poster {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .film-info {
+        padding: 15px;
+    }
+
+    .film-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .film-genre {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .film-rating {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: #ffc107;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .film-description {
+        font-size: 14px;
+        color: #777;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+    .film-actions {
+        display: flex;
+        gap: 10px;
+    }
+
+    .btn-small {
+        padding: 5px 15px;
+        font-size: 14px;
+    }
+
+    .search-filter {
+        display: flex;
+        gap: 15px;
+        margin: 20px 0;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .search-form {
+        display: flex;
+        gap: 10px;
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .filter-options {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    </style>
+</head>
+<body>
